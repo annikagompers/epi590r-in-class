@@ -94,33 +94,42 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 </header>
 
+<p>Including the <code>cache: true</code> statement under <code>execute:</code> in the header will save the output of code as long as nothing changes (which allows you to render faster if you keep re-rendering).</p>
+<div class="cell" data-hash="_gtsummary_quarto_cache/html/unnamed-chunk-1_7c2317230283b03c5cf2c033c06c760c">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>here<span class="sc">::</span><span class="fu">here</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "C:/Users/agomper/OneDrive - Emory University/Documents/Year 2/EPI 590R/epi590r-in-class"</code></pre>
+</div>
+</div>
+<p>Include the above code to see where you’re drawing data from and where the rendered document will be saved.</p>
+<p>Other options: Suppress code (but still run it) using <code>#| echo: FALSE</code> Suppress output with <code>#| output: FALSE</code> or <code>#| message: FALSE</code></p>
 <section id="customization-of-tbl_summary" class="level1">
 <h1>Customization of <code>tbl_summary()</code></h1>
-<div class="cell" data-hash="_gtsummary_quarto_cache/html/unnamed-chunk-2_76989060170b5b9a1fb81a844916d2b1">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">tbl_summary</span>(</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  nlsy,</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">by =</span> sex_cat,</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">include =</span> <span class="fu">c</span>(sex_cat, race_eth_cat, region_cat,</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>              eyesight_cat, glasses, age_bir))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell" data-hash="_gtsummary_quarto_cache/html/unnamed-chunk-3_484d66f2e7d01792501de37154c729bc">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">tbl_summary</span>(</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  nlsy,</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">by =</span> sex_cat,</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">include =</span> <span class="fu">c</span>(sex_cat, race_eth_cat, region_cat,</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>              eyesight_cat, glasses, age_bir))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 
-<div id="fzpfkdpxwl" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#fzpfkdpxwl table {
+<div id="duqeczvtsu" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#duqeczvtsu table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#fzpfkdpxwl thead, #fzpfkdpxwl tbody, #fzpfkdpxwl tfoot, #fzpfkdpxwl tr, #fzpfkdpxwl td, #fzpfkdpxwl th {
+#duqeczvtsu thead, #duqeczvtsu tbody, #duqeczvtsu tfoot, #duqeczvtsu tr, #duqeczvtsu td, #duqeczvtsu th {
   border-style: none;
 }
 
-#fzpfkdpxwl p {
+#duqeczvtsu p {
   margin: 0;
   padding: 0;
 }
 
-#fzpfkdpxwl .gt_table {
+#duqeczvtsu .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -146,12 +155,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-left-color: #D3D3D3;
 }
 
-#fzpfkdpxwl .gt_caption {
+#duqeczvtsu .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#fzpfkdpxwl .gt_title {
+#duqeczvtsu .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -163,7 +172,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-bottom-width: 0;
 }
 
-#fzpfkdpxwl .gt_subtitle {
+#duqeczvtsu .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -175,7 +184,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-top-width: 0;
 }
 
-#fzpfkdpxwl .gt_heading {
+#duqeczvtsu .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -187,13 +196,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-right-color: #D3D3D3;
 }
 
-#fzpfkdpxwl .gt_bottom_border {
+#duqeczvtsu .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#fzpfkdpxwl .gt_col_headings {
+#duqeczvtsu .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -208,7 +217,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-right-color: #D3D3D3;
 }
 
-#fzpfkdpxwl .gt_col_heading {
+#duqeczvtsu .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -228,7 +237,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   overflow-x: hidden;
 }
 
-#fzpfkdpxwl .gt_column_spanner_outer {
+#duqeczvtsu .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -240,15 +249,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 4px;
 }
 
-#fzpfkdpxwl .gt_column_spanner_outer:first-child {
+#duqeczvtsu .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#fzpfkdpxwl .gt_column_spanner_outer:last-child {
+#duqeczvtsu .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#fzpfkdpxwl .gt_column_spanner {
+#duqeczvtsu .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -260,11 +269,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   width: 100%;
 }
 
-#fzpfkdpxwl .gt_spanner_row {
+#duqeczvtsu .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#fzpfkdpxwl .gt_group_heading {
+#duqeczvtsu .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -290,7 +299,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   text-align: left;
 }
 
-#fzpfkdpxwl .gt_empty_group_heading {
+#duqeczvtsu .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -305,15 +314,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   vertical-align: middle;
 }
 
-#fzpfkdpxwl .gt_from_md > :first-child {
+#duqeczvtsu .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#fzpfkdpxwl .gt_from_md > :last-child {
+#duqeczvtsu .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#fzpfkdpxwl .gt_row {
+#duqeczvtsu .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -332,7 +341,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   overflow-x: hidden;
 }
 
-#fzpfkdpxwl .gt_stub {
+#duqeczvtsu .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -345,7 +354,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#fzpfkdpxwl .gt_stub_row_group {
+#duqeczvtsu .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -359,15 +368,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   vertical-align: top;
 }
 
-#fzpfkdpxwl .gt_row_group_first td {
+#duqeczvtsu .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#fzpfkdpxwl .gt_row_group_first th {
+#duqeczvtsu .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#fzpfkdpxwl .gt_summary_row {
+#duqeczvtsu .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -377,16 +386,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#fzpfkdpxwl .gt_first_summary_row {
+#duqeczvtsu .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#fzpfkdpxwl .gt_first_summary_row.thick {
+#duqeczvtsu .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#fzpfkdpxwl .gt_last_summary_row {
+#duqeczvtsu .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -396,7 +405,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-bottom-color: #D3D3D3;
 }
 
-#fzpfkdpxwl .gt_grand_summary_row {
+#duqeczvtsu .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -406,7 +415,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#fzpfkdpxwl .gt_first_grand_summary_row {
+#duqeczvtsu .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -416,7 +425,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-top-color: #D3D3D3;
 }
 
-#fzpfkdpxwl .gt_last_grand_summary_row_top {
+#duqeczvtsu .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -426,11 +435,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-bottom-color: #D3D3D3;
 }
 
-#fzpfkdpxwl .gt_striped {
+#duqeczvtsu .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#fzpfkdpxwl .gt_table_body {
+#duqeczvtsu .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -439,7 +448,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-bottom-color: #D3D3D3;
 }
 
-#fzpfkdpxwl .gt_footnotes {
+#duqeczvtsu .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -453,7 +462,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-right-color: #D3D3D3;
 }
 
-#fzpfkdpxwl .gt_footnote {
+#duqeczvtsu .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -462,7 +471,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#fzpfkdpxwl .gt_sourcenotes {
+#duqeczvtsu .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -476,7 +485,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-right-color: #D3D3D3;
 }
 
-#fzpfkdpxwl .gt_sourcenote {
+#duqeczvtsu .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -484,63 +493,63 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#fzpfkdpxwl .gt_left {
+#duqeczvtsu .gt_left {
   text-align: left;
 }
 
-#fzpfkdpxwl .gt_center {
+#duqeczvtsu .gt_center {
   text-align: center;
 }
 
-#fzpfkdpxwl .gt_right {
+#duqeczvtsu .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#fzpfkdpxwl .gt_font_normal {
+#duqeczvtsu .gt_font_normal {
   font-weight: normal;
 }
 
-#fzpfkdpxwl .gt_font_bold {
+#duqeczvtsu .gt_font_bold {
   font-weight: bold;
 }
 
-#fzpfkdpxwl .gt_font_italic {
+#duqeczvtsu .gt_font_italic {
   font-style: italic;
 }
 
-#fzpfkdpxwl .gt_super {
+#duqeczvtsu .gt_super {
   font-size: 65%;
 }
 
-#fzpfkdpxwl .gt_footnote_marks {
+#duqeczvtsu .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#fzpfkdpxwl .gt_asterisk {
+#duqeczvtsu .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#fzpfkdpxwl .gt_indent_1 {
+#duqeczvtsu .gt_indent_1 {
   text-indent: 5px;
 }
 
-#fzpfkdpxwl .gt_indent_2 {
+#duqeczvtsu .gt_indent_2 {
   text-indent: 10px;
 }
 
-#fzpfkdpxwl .gt_indent_3 {
+#duqeczvtsu .gt_indent_3 {
   text-indent: 15px;
 }
 
-#fzpfkdpxwl .gt_indent_4 {
+#duqeczvtsu .gt_indent_4 {
   text-indent: 20px;
 }
 
-#fzpfkdpxwl .gt_indent_5 {
+#duqeczvtsu .gt_indent_5 {
   text-indent: 25px;
 }
 </style>
@@ -628,39 +637,39 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </div>
-<div class="cell" data-hash="_gtsummary_quarto_cache/html/unnamed-chunk-3_c32d50d1743a1fd07750ab26a7dac85f">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">tbl_summary</span>(</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  nlsy,</span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">by =</span> sex_cat,</span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">include =</span> <span class="fu">c</span>(sex_cat, race_eth_cat, region_cat,</span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>              eyesight_cat, glasses, age_bir),</span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">label =</span> <span class="fu">list</span>(</span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>    race_eth_cat <span class="sc">~</span> <span class="st">"Race/ethnicity"</span>,</span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>    region_cat <span class="sc">~</span> <span class="st">"Region"</span>,</span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>    eyesight_cat <span class="sc">~</span> <span class="st">"Eyesight"</span>,</span>
-<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>    glasses <span class="sc">~</span> <span class="st">"Wears glasses"</span>,</span>
-<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>    age_bir <span class="sc">~</span> <span class="st">"Age at first birth"</span></span>
-<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>  ),</span>
-<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>  <span class="at">missing_text =</span> <span class="st">"Missing"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell" data-hash="_gtsummary_quarto_cache/html/unnamed-chunk-4_c843f54c2a06bcbbd6c76dc54bf5d1e3">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">tbl_summary</span>(</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>  nlsy,</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">by =</span> sex_cat,</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">include =</span> <span class="fu">c</span>(sex_cat, race_eth_cat, region_cat,</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>              eyesight_cat, glasses, age_bir),</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">label =</span> <span class="fu">list</span>(</span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>    race_eth_cat <span class="sc">~</span> <span class="st">"Race/ethnicity"</span>,</span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>    region_cat <span class="sc">~</span> <span class="st">"Region"</span>,</span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>    eyesight_cat <span class="sc">~</span> <span class="st">"Eyesight"</span>,</span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>    glasses <span class="sc">~</span> <span class="st">"Wears glasses"</span>,</span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>    age_bir <span class="sc">~</span> <span class="st">"Age at first birth"</span></span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>  ),</span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>  <span class="at">missing_text =</span> <span class="st">"Missing"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 
-<div id="drxirqbjiq" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#drxirqbjiq table {
+<div id="etuakukcwa" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#etuakukcwa table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#drxirqbjiq thead, #drxirqbjiq tbody, #drxirqbjiq tfoot, #drxirqbjiq tr, #drxirqbjiq td, #drxirqbjiq th {
+#etuakukcwa thead, #etuakukcwa tbody, #etuakukcwa tfoot, #etuakukcwa tr, #etuakukcwa td, #etuakukcwa th {
   border-style: none;
 }
 
-#drxirqbjiq p {
+#etuakukcwa p {
   margin: 0;
   padding: 0;
 }
 
-#drxirqbjiq .gt_table {
+#etuakukcwa .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -686,12 +695,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-left-color: #D3D3D3;
 }
 
-#drxirqbjiq .gt_caption {
+#etuakukcwa .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#drxirqbjiq .gt_title {
+#etuakukcwa .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -703,7 +712,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-bottom-width: 0;
 }
 
-#drxirqbjiq .gt_subtitle {
+#etuakukcwa .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -715,7 +724,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-top-width: 0;
 }
 
-#drxirqbjiq .gt_heading {
+#etuakukcwa .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -727,13 +736,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-right-color: #D3D3D3;
 }
 
-#drxirqbjiq .gt_bottom_border {
+#etuakukcwa .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#drxirqbjiq .gt_col_headings {
+#etuakukcwa .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -748,7 +757,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-right-color: #D3D3D3;
 }
 
-#drxirqbjiq .gt_col_heading {
+#etuakukcwa .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -768,7 +777,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   overflow-x: hidden;
 }
 
-#drxirqbjiq .gt_column_spanner_outer {
+#etuakukcwa .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -780,15 +789,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 4px;
 }
 
-#drxirqbjiq .gt_column_spanner_outer:first-child {
+#etuakukcwa .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#drxirqbjiq .gt_column_spanner_outer:last-child {
+#etuakukcwa .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#drxirqbjiq .gt_column_spanner {
+#etuakukcwa .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -800,11 +809,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   width: 100%;
 }
 
-#drxirqbjiq .gt_spanner_row {
+#etuakukcwa .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#drxirqbjiq .gt_group_heading {
+#etuakukcwa .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -830,7 +839,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   text-align: left;
 }
 
-#drxirqbjiq .gt_empty_group_heading {
+#etuakukcwa .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -845,15 +854,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   vertical-align: middle;
 }
 
-#drxirqbjiq .gt_from_md > :first-child {
+#etuakukcwa .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#drxirqbjiq .gt_from_md > :last-child {
+#etuakukcwa .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#drxirqbjiq .gt_row {
+#etuakukcwa .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -872,7 +881,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   overflow-x: hidden;
 }
 
-#drxirqbjiq .gt_stub {
+#etuakukcwa .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -885,7 +894,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#drxirqbjiq .gt_stub_row_group {
+#etuakukcwa .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -899,15 +908,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   vertical-align: top;
 }
 
-#drxirqbjiq .gt_row_group_first td {
+#etuakukcwa .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#drxirqbjiq .gt_row_group_first th {
+#etuakukcwa .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#drxirqbjiq .gt_summary_row {
+#etuakukcwa .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -917,16 +926,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#drxirqbjiq .gt_first_summary_row {
+#etuakukcwa .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#drxirqbjiq .gt_first_summary_row.thick {
+#etuakukcwa .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#drxirqbjiq .gt_last_summary_row {
+#etuakukcwa .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -936,7 +945,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-bottom-color: #D3D3D3;
 }
 
-#drxirqbjiq .gt_grand_summary_row {
+#etuakukcwa .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -946,7 +955,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#drxirqbjiq .gt_first_grand_summary_row {
+#etuakukcwa .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -956,7 +965,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-top-color: #D3D3D3;
 }
 
-#drxirqbjiq .gt_last_grand_summary_row_top {
+#etuakukcwa .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -966,11 +975,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-bottom-color: #D3D3D3;
 }
 
-#drxirqbjiq .gt_striped {
+#etuakukcwa .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#drxirqbjiq .gt_table_body {
+#etuakukcwa .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -979,7 +988,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-bottom-color: #D3D3D3;
 }
 
-#drxirqbjiq .gt_footnotes {
+#etuakukcwa .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -993,7 +1002,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-right-color: #D3D3D3;
 }
 
-#drxirqbjiq .gt_footnote {
+#etuakukcwa .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -1002,7 +1011,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#drxirqbjiq .gt_sourcenotes {
+#etuakukcwa .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1016,7 +1025,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-right-color: #D3D3D3;
 }
 
-#drxirqbjiq .gt_sourcenote {
+#etuakukcwa .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -1024,63 +1033,63 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#drxirqbjiq .gt_left {
+#etuakukcwa .gt_left {
   text-align: left;
 }
 
-#drxirqbjiq .gt_center {
+#etuakukcwa .gt_center {
   text-align: center;
 }
 
-#drxirqbjiq .gt_right {
+#etuakukcwa .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#drxirqbjiq .gt_font_normal {
+#etuakukcwa .gt_font_normal {
   font-weight: normal;
 }
 
-#drxirqbjiq .gt_font_bold {
+#etuakukcwa .gt_font_bold {
   font-weight: bold;
 }
 
-#drxirqbjiq .gt_font_italic {
+#etuakukcwa .gt_font_italic {
   font-style: italic;
 }
 
-#drxirqbjiq .gt_super {
+#etuakukcwa .gt_super {
   font-size: 65%;
 }
 
-#drxirqbjiq .gt_footnote_marks {
+#etuakukcwa .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#drxirqbjiq .gt_asterisk {
+#etuakukcwa .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#drxirqbjiq .gt_indent_1 {
+#etuakukcwa .gt_indent_1 {
   text-indent: 5px;
 }
 
-#drxirqbjiq .gt_indent_2 {
+#etuakukcwa .gt_indent_2 {
   text-indent: 10px;
 }
 
-#drxirqbjiq .gt_indent_3 {
+#etuakukcwa .gt_indent_3 {
   text-indent: 15px;
 }
 
-#drxirqbjiq .gt_indent_4 {
+#etuakukcwa .gt_indent_4 {
   text-indent: 20px;
 }
 
-#drxirqbjiq .gt_indent_5 {
+#etuakukcwa .gt_indent_5 {
   text-indent: 25px;
 }
 </style>
@@ -1168,44 +1177,70 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </div>
-<div class="cell" data-hash="_gtsummary_quarto_cache/html/unnamed-chunk-4_34a787a51c9b5cc5a30c5075a5d2453f">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">tbl_summary</span>(</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  nlsy,</span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">by =</span> sex_cat,</span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">include =</span> <span class="fu">c</span>(sex_cat, race_eth_cat,</span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>              eyesight_cat, glasses, age_bir),</span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">label =</span> <span class="fu">list</span>(</span>
-<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>    race_eth_cat <span class="sc">~</span> <span class="st">"Race/ethnicity"</span>,</span>
-<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>    eyesight_cat <span class="sc">~</span> <span class="st">"Eyesight"</span>,</span>
-<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>    glasses <span class="sc">~</span> <span class="st">"Wears glasses"</span>,</span>
-<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>    age_bir <span class="sc">~</span> <span class="st">"Age at first birth"</span></span>
-<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>  ),</span>
-<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>  <span class="at">missing_text =</span> <span class="st">"Missing"</span>) <span class="sc">|&gt;</span> </span>
-<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">add_p</span>(<span class="at">test =</span> <span class="fu">list</span>(<span class="fu">all_continuous</span>() <span class="sc">~</span> <span class="st">"t.test"</span>, </span>
-<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>                    <span class="fu">all_categorical</span>() <span class="sc">~</span> <span class="st">"chisq.test"</span>)) <span class="sc">|&gt;</span> </span>
-<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">add_overall</span>(<span class="at">col_label =</span> <span class="st">"**Total**"</span>) <span class="sc">|&gt;</span> </span>
-<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">bold_labels</span>() <span class="sc">|&gt;</span> </span>
-<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>  <span class="fu">modify_footnote</span>(<span class="at">update =</span> <span class="fu">everything</span>() <span class="sc">~</span> <span class="cn">NA</span>) <span class="sc">|&gt;</span> </span>
-<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a>  <span class="fu">modify_header</span>(<span class="at">label =</span> <span class="st">"**Variable**"</span>, <span class="at">p.value =</span> <span class="st">"**P**"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
+<div class="cell" data-hash="_gtsummary_quarto_cache/html/tbl-one_1d47316f7990b052d4bb93ea65266c70">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>table1 <span class="ot">&lt;-</span> <span class="fu">tbl_summary</span>(</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>  nlsy,</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">by =</span> sex_cat,</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">include =</span> <span class="fu">c</span>(sex_cat, race_eth_cat,</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>              eyesight_cat, glasses, age_bir),</span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">label =</span> <span class="fu">list</span>(</span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>    race_eth_cat <span class="sc">~</span> <span class="st">"Race/ethnicity"</span>,</span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>    eyesight_cat <span class="sc">~</span> <span class="st">"Eyesight"</span>,</span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>    glasses <span class="sc">~</span> <span class="st">"Wears glasses"</span>,</span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>    age_bir <span class="sc">~</span> <span class="st">"Age at first birth"</span></span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>  ),</span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a>  <span class="at">missing_text =</span> <span class="st">"Missing"</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">add_p</span>(<span class="at">test =</span> <span class="fu">list</span>(<span class="fu">all_continuous</span>() <span class="sc">~</span> <span class="st">"t.test"</span>, </span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a>                    <span class="fu">all_categorical</span>() <span class="sc">~</span> <span class="st">"chisq.test"</span>)) <span class="sc">|&gt;</span> </span>
+<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">add_overall</span>(<span class="at">col_label =</span> <span class="st">"**Total**"</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">bold_labels</span>() <span class="sc">|&gt;</span> </span>
+<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a>  <span class="fu">modify_footnote</span>(<span class="at">update =</span> <span class="fu">everything</span>() <span class="sc">~</span> <span class="cn">NA</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a>  <span class="fu">modify_header</span>(<span class="at">label =</span> <span class="st">"**Variable**"</span>, <span class="at">p.value =</span> <span class="st">"**P**"</span>)</span>
+<span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a>header_names <span class="ot">&lt;-</span> table1 <span class="sc">|&gt;</span> <span class="fu">show_header_names</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>ℹ As a usage guide, the code below re-creates the current column headers.</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>modify_header(
+  label = "**Variable**",
+  stat_0 = "**Total**",
+  stat_1 = "**Male**, N = 6,403",
+  stat_2 = "**Female**, N = 6,283",
+  p.value = "**P**"
+)</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
 
-<div id="mpjatntmzi" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#mpjatntmzi table {
+Column Name   Column Header         
+------------  ----------------------
+label         **Variable**          
+stat_0        **Total**             
+stat_1        **Male**, N = 6,403   
+stat_2        **Female**, N = 6,283 
+p.value       **P**                 </code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>table1</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div id="tbl-one" class="anchored">
+
+<div id="dbvotofrnn" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#dbvotofrnn table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#mpjatntmzi thead, #mpjatntmzi tbody, #mpjatntmzi tfoot, #mpjatntmzi tr, #mpjatntmzi td, #mpjatntmzi th {
+#dbvotofrnn thead, #dbvotofrnn tbody, #dbvotofrnn tfoot, #dbvotofrnn tr, #dbvotofrnn td, #dbvotofrnn th {
   border-style: none;
 }
 
-#mpjatntmzi p {
+#dbvotofrnn p {
   margin: 0;
   padding: 0;
 }
 
-#mpjatntmzi .gt_table {
+#dbvotofrnn .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -1231,12 +1266,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-left-color: #D3D3D3;
 }
 
-#mpjatntmzi .gt_caption {
+#dbvotofrnn .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#mpjatntmzi .gt_title {
+#dbvotofrnn .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -1248,7 +1283,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-bottom-width: 0;
 }
 
-#mpjatntmzi .gt_subtitle {
+#dbvotofrnn .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -1260,7 +1295,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-top-width: 0;
 }
 
-#mpjatntmzi .gt_heading {
+#dbvotofrnn .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -1272,13 +1307,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-right-color: #D3D3D3;
 }
 
-#mpjatntmzi .gt_bottom_border {
+#dbvotofrnn .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#mpjatntmzi .gt_col_headings {
+#dbvotofrnn .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1293,7 +1328,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-right-color: #D3D3D3;
 }
 
-#mpjatntmzi .gt_col_heading {
+#dbvotofrnn .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1313,7 +1348,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   overflow-x: hidden;
 }
 
-#mpjatntmzi .gt_column_spanner_outer {
+#dbvotofrnn .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1325,15 +1360,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 4px;
 }
 
-#mpjatntmzi .gt_column_spanner_outer:first-child {
+#dbvotofrnn .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#mpjatntmzi .gt_column_spanner_outer:last-child {
+#dbvotofrnn .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#mpjatntmzi .gt_column_spanner {
+#dbvotofrnn .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -1345,11 +1380,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   width: 100%;
 }
 
-#mpjatntmzi .gt_spanner_row {
+#dbvotofrnn .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#mpjatntmzi .gt_group_heading {
+#dbvotofrnn .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1375,7 +1410,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   text-align: left;
 }
 
-#mpjatntmzi .gt_empty_group_heading {
+#dbvotofrnn .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -1390,15 +1425,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   vertical-align: middle;
 }
 
-#mpjatntmzi .gt_from_md > :first-child {
+#dbvotofrnn .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#mpjatntmzi .gt_from_md > :last-child {
+#dbvotofrnn .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#mpjatntmzi .gt_row {
+#dbvotofrnn .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1417,7 +1452,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   overflow-x: hidden;
 }
 
-#mpjatntmzi .gt_stub {
+#dbvotofrnn .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1430,7 +1465,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#mpjatntmzi .gt_stub_row_group {
+#dbvotofrnn .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1444,15 +1479,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   vertical-align: top;
 }
 
-#mpjatntmzi .gt_row_group_first td {
+#dbvotofrnn .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#mpjatntmzi .gt_row_group_first th {
+#dbvotofrnn .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#mpjatntmzi .gt_summary_row {
+#dbvotofrnn .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1462,16 +1497,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#mpjatntmzi .gt_first_summary_row {
+#dbvotofrnn .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#mpjatntmzi .gt_first_summary_row.thick {
+#dbvotofrnn .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#mpjatntmzi .gt_last_summary_row {
+#dbvotofrnn .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1481,7 +1516,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-bottom-color: #D3D3D3;
 }
 
-#mpjatntmzi .gt_grand_summary_row {
+#dbvotofrnn .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1491,7 +1526,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#mpjatntmzi .gt_first_grand_summary_row {
+#dbvotofrnn .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1501,7 +1536,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-top-color: #D3D3D3;
 }
 
-#mpjatntmzi .gt_last_grand_summary_row_top {
+#dbvotofrnn .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1511,11 +1546,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-bottom-color: #D3D3D3;
 }
 
-#mpjatntmzi .gt_striped {
+#dbvotofrnn .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#mpjatntmzi .gt_table_body {
+#dbvotofrnn .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1524,7 +1559,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-bottom-color: #D3D3D3;
 }
 
-#mpjatntmzi .gt_footnotes {
+#dbvotofrnn .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1538,7 +1573,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-right-color: #D3D3D3;
 }
 
-#mpjatntmzi .gt_footnote {
+#dbvotofrnn .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -1547,7 +1582,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#mpjatntmzi .gt_sourcenotes {
+#dbvotofrnn .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1561,7 +1596,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-right-color: #D3D3D3;
 }
 
-#mpjatntmzi .gt_sourcenote {
+#dbvotofrnn .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -1569,67 +1604,67 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#mpjatntmzi .gt_left {
+#dbvotofrnn .gt_left {
   text-align: left;
 }
 
-#mpjatntmzi .gt_center {
+#dbvotofrnn .gt_center {
   text-align: center;
 }
 
-#mpjatntmzi .gt_right {
+#dbvotofrnn .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#mpjatntmzi .gt_font_normal {
+#dbvotofrnn .gt_font_normal {
   font-weight: normal;
 }
 
-#mpjatntmzi .gt_font_bold {
+#dbvotofrnn .gt_font_bold {
   font-weight: bold;
 }
 
-#mpjatntmzi .gt_font_italic {
+#dbvotofrnn .gt_font_italic {
   font-style: italic;
 }
 
-#mpjatntmzi .gt_super {
+#dbvotofrnn .gt_super {
   font-size: 65%;
 }
 
-#mpjatntmzi .gt_footnote_marks {
+#dbvotofrnn .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#mpjatntmzi .gt_asterisk {
+#dbvotofrnn .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#mpjatntmzi .gt_indent_1 {
+#dbvotofrnn .gt_indent_1 {
   text-indent: 5px;
 }
 
-#mpjatntmzi .gt_indent_2 {
+#dbvotofrnn .gt_indent_2 {
   text-indent: 10px;
 }
 
-#mpjatntmzi .gt_indent_3 {
+#dbvotofrnn .gt_indent_3 {
   text-indent: 15px;
 }
 
-#mpjatntmzi .gt_indent_4 {
+#dbvotofrnn .gt_indent_4 {
   text-indent: 20px;
 }
 
-#mpjatntmzi .gt_indent_5 {
+#dbvotofrnn .gt_indent_5 {
   text-indent: 25px;
 }
 </style>
-<table class="gt_table" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
+<table class="gt_table" data-quarto-disable-processing="false" data-quarto-bootstrap="false"><caption>Table&nbsp;1:  <p>Demographics by sex</p> </caption>
   <thead>
     
     <tr class="gt_col_headings">
@@ -1723,35 +1758,45 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </div>
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>pval_race <span class="ot">&lt;-</span> <span class="fu">inline_text</span>(table1, <span class="at">variable =</span> <span class="st">"race_eth_cat"</span>,</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>                                                    <span class="at">column =</span> <span class="st">"p.value"</span>)</span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>pval_race</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "p=0.8"</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>diff_race <span class="ot">&lt;-</span> <span class="cf">if</span> (pval_race <span class="sc">&lt;</span> <span class="fl">0.05</span>) <span class="st">"was significantly different"</span> <span class="cf">else</span> <span class="st">"did not differ"</span></span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>stats <span class="ot">&lt;-</span> <span class="fu">list</span>(<span class="at">mean_sleep_m =</span> <span class="fu">round</span>(<span class="fu">mean</span>(nlsy<span class="sc">$</span>sleep_wknd[nlsy<span class="sc">$</span>sex_cat<span class="sc">==</span><span class="st">"Male"</span>], <span class="at">na.rm=</span><span class="cn">TRUE</span>), <span class="dv">2</span>), <span class="at">mean_sleep_f =</span> <span class="fu">round</span>(<span class="fu">mean</span>(nlsy<span class="sc">$</span>sleep_wknd[nlsy<span class="sc">$</span>sex_cat<span class="sc">==</span><span class="st">"Female"</span>], <span class="at">na.rm=</span><span class="cn">TRUE</span>), <span class="dv">2</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p><a href="#tbl-one">Table&nbsp;1</a> shows descriptive statistics stratified by sex. The distribution of race/ethnicity did not differ by sex (p=0.8). The mean number of hours slept on weekends was 7.14 among men and 7.19 among women.</p>
 </section>
 <section id="univariate-regression" class="level1">
 <h1>Univariate regression</h1>
-<div class="cell" data-hash="_gtsummary_quarto_cache/html/unnamed-chunk-5_bfdb159d594656faae49e48093852db5">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">tbl_uvregression</span>(</span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>  nlsy, </span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">y =</span> income,</span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">include =</span> <span class="fu">c</span>(sex_cat, race_eth_cat,</span>
-<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>              eyesight_cat, income, age_bir),</span>
-<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">method =</span> lm)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell" data-hash="_gtsummary_quarto_cache/html/unnamed-chunk-6_04e247c193e0017d5eb465bc8c25e604">
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">tbl_uvregression</span>(</span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>  nlsy, </span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">y =</span> income,</span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">include =</span> <span class="fu">c</span>(sex_cat, race_eth_cat,</span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>              eyesight_cat, income, age_bir),</span>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">method =</span> lm)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 
-<div id="bdgjjdubcy" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#bdgjjdubcy table {
+<div id="ninuccixpj" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#ninuccixpj table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#bdgjjdubcy thead, #bdgjjdubcy tbody, #bdgjjdubcy tfoot, #bdgjjdubcy tr, #bdgjjdubcy td, #bdgjjdubcy th {
+#ninuccixpj thead, #ninuccixpj tbody, #ninuccixpj tfoot, #ninuccixpj tr, #ninuccixpj td, #ninuccixpj th {
   border-style: none;
 }
 
-#bdgjjdubcy p {
+#ninuccixpj p {
   margin: 0;
   padding: 0;
 }
 
-#bdgjjdubcy .gt_table {
+#ninuccixpj .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -1777,12 +1822,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-left-color: #D3D3D3;
 }
 
-#bdgjjdubcy .gt_caption {
+#ninuccixpj .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#bdgjjdubcy .gt_title {
+#ninuccixpj .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -1794,7 +1839,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-bottom-width: 0;
 }
 
-#bdgjjdubcy .gt_subtitle {
+#ninuccixpj .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -1806,7 +1851,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-top-width: 0;
 }
 
-#bdgjjdubcy .gt_heading {
+#ninuccixpj .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -1818,13 +1863,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-right-color: #D3D3D3;
 }
 
-#bdgjjdubcy .gt_bottom_border {
+#ninuccixpj .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#bdgjjdubcy .gt_col_headings {
+#ninuccixpj .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1839,7 +1884,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-right-color: #D3D3D3;
 }
 
-#bdgjjdubcy .gt_col_heading {
+#ninuccixpj .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1859,7 +1904,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   overflow-x: hidden;
 }
 
-#bdgjjdubcy .gt_column_spanner_outer {
+#ninuccixpj .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1871,15 +1916,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 4px;
 }
 
-#bdgjjdubcy .gt_column_spanner_outer:first-child {
+#ninuccixpj .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#bdgjjdubcy .gt_column_spanner_outer:last-child {
+#ninuccixpj .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#bdgjjdubcy .gt_column_spanner {
+#ninuccixpj .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -1891,11 +1936,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   width: 100%;
 }
 
-#bdgjjdubcy .gt_spanner_row {
+#ninuccixpj .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#bdgjjdubcy .gt_group_heading {
+#ninuccixpj .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1921,7 +1966,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   text-align: left;
 }
 
-#bdgjjdubcy .gt_empty_group_heading {
+#ninuccixpj .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -1936,15 +1981,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   vertical-align: middle;
 }
 
-#bdgjjdubcy .gt_from_md > :first-child {
+#ninuccixpj .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#bdgjjdubcy .gt_from_md > :last-child {
+#ninuccixpj .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#bdgjjdubcy .gt_row {
+#ninuccixpj .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1963,7 +2008,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   overflow-x: hidden;
 }
 
-#bdgjjdubcy .gt_stub {
+#ninuccixpj .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1976,7 +2021,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#bdgjjdubcy .gt_stub_row_group {
+#ninuccixpj .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1990,15 +2035,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   vertical-align: top;
 }
 
-#bdgjjdubcy .gt_row_group_first td {
+#ninuccixpj .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#bdgjjdubcy .gt_row_group_first th {
+#ninuccixpj .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#bdgjjdubcy .gt_summary_row {
+#ninuccixpj .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -2008,16 +2053,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#bdgjjdubcy .gt_first_summary_row {
+#ninuccixpj .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#bdgjjdubcy .gt_first_summary_row.thick {
+#ninuccixpj .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#bdgjjdubcy .gt_last_summary_row {
+#ninuccixpj .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2027,7 +2072,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-bottom-color: #D3D3D3;
 }
 
-#bdgjjdubcy .gt_grand_summary_row {
+#ninuccixpj .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -2037,7 +2082,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#bdgjjdubcy .gt_first_grand_summary_row {
+#ninuccixpj .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2047,7 +2092,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-top-color: #D3D3D3;
 }
 
-#bdgjjdubcy .gt_last_grand_summary_row_top {
+#ninuccixpj .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2057,11 +2102,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-bottom-color: #D3D3D3;
 }
 
-#bdgjjdubcy .gt_striped {
+#ninuccixpj .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#bdgjjdubcy .gt_table_body {
+#ninuccixpj .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -2070,7 +2115,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-bottom-color: #D3D3D3;
 }
 
-#bdgjjdubcy .gt_footnotes {
+#ninuccixpj .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -2084,7 +2129,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-right-color: #D3D3D3;
 }
 
-#bdgjjdubcy .gt_footnote {
+#ninuccixpj .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -2093,7 +2138,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#bdgjjdubcy .gt_sourcenotes {
+#ninuccixpj .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -2107,7 +2152,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-right-color: #D3D3D3;
 }
 
-#bdgjjdubcy .gt_sourcenote {
+#ninuccixpj .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -2115,63 +2160,63 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#bdgjjdubcy .gt_left {
+#ninuccixpj .gt_left {
   text-align: left;
 }
 
-#bdgjjdubcy .gt_center {
+#ninuccixpj .gt_center {
   text-align: center;
 }
 
-#bdgjjdubcy .gt_right {
+#ninuccixpj .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#bdgjjdubcy .gt_font_normal {
+#ninuccixpj .gt_font_normal {
   font-weight: normal;
 }
 
-#bdgjjdubcy .gt_font_bold {
+#ninuccixpj .gt_font_bold {
   font-weight: bold;
 }
 
-#bdgjjdubcy .gt_font_italic {
+#ninuccixpj .gt_font_italic {
   font-style: italic;
 }
 
-#bdgjjdubcy .gt_super {
+#ninuccixpj .gt_super {
   font-size: 65%;
 }
 
-#bdgjjdubcy .gt_footnote_marks {
+#ninuccixpj .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#bdgjjdubcy .gt_asterisk {
+#ninuccixpj .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#bdgjjdubcy .gt_indent_1 {
+#ninuccixpj .gt_indent_1 {
   text-indent: 5px;
 }
 
-#bdgjjdubcy .gt_indent_2 {
+#ninuccixpj .gt_indent_2 {
   text-indent: 10px;
 }
 
-#bdgjjdubcy .gt_indent_3 {
+#ninuccixpj .gt_indent_3 {
   text-indent: 15px;
 }
 
-#bdgjjdubcy .gt_indent_4 {
+#ninuccixpj .gt_indent_4 {
   text-indent: 20px;
 }
 
-#bdgjjdubcy .gt_indent_5 {
+#ninuccixpj .gt_indent_5 {
   text-indent: 25px;
 }
 </style>
@@ -2268,34 +2313,34 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </div>
-<div class="cell" data-hash="_gtsummary_quarto_cache/html/unnamed-chunk-6_e884ebf73bdbc0997100b1b601ae9b99">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">tbl_uvregression</span>(</span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>  nlsy, </span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">y =</span> glasses,</span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">include =</span> <span class="fu">c</span>(sex_cat, race_eth_cat,</span>
-<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>              eyesight_cat, glasses, age_bir),</span>
-<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">method =</span> glm,</span>
-<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>  <span class="at">method.args =</span> <span class="fu">list</span>(<span class="at">family =</span> <span class="fu">binomial</span>()),</span>
-<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>  <span class="at">exponentiate =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell" data-hash="_gtsummary_quarto_cache/html/unnamed-chunk-7_74b1141f7fa5a2ad2126ef17ed8d699b">
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="fu">tbl_uvregression</span>(</span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>  nlsy, </span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">y =</span> glasses,</span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">include =</span> <span class="fu">c</span>(sex_cat, race_eth_cat,</span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a>              eyesight_cat, glasses, age_bir),</span>
+<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">method =</span> glm,</span>
+<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a>  <span class="at">method.args =</span> <span class="fu">list</span>(<span class="at">family =</span> <span class="fu">binomial</span>()),</span>
+<span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a>  <span class="at">exponentiate =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 
-<div id="songoqktkb" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#songoqktkb table {
+<div id="hpcwqctrwv" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#hpcwqctrwv table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#songoqktkb thead, #songoqktkb tbody, #songoqktkb tfoot, #songoqktkb tr, #songoqktkb td, #songoqktkb th {
+#hpcwqctrwv thead, #hpcwqctrwv tbody, #hpcwqctrwv tfoot, #hpcwqctrwv tr, #hpcwqctrwv td, #hpcwqctrwv th {
   border-style: none;
 }
 
-#songoqktkb p {
+#hpcwqctrwv p {
   margin: 0;
   padding: 0;
 }
 
-#songoqktkb .gt_table {
+#hpcwqctrwv .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -2321,12 +2366,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-left-color: #D3D3D3;
 }
 
-#songoqktkb .gt_caption {
+#hpcwqctrwv .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#songoqktkb .gt_title {
+#hpcwqctrwv .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -2338,7 +2383,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-bottom-width: 0;
 }
 
-#songoqktkb .gt_subtitle {
+#hpcwqctrwv .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -2350,7 +2395,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-top-width: 0;
 }
 
-#songoqktkb .gt_heading {
+#hpcwqctrwv .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -2362,13 +2407,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-right-color: #D3D3D3;
 }
 
-#songoqktkb .gt_bottom_border {
+#hpcwqctrwv .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#songoqktkb .gt_col_headings {
+#hpcwqctrwv .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -2383,7 +2428,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-right-color: #D3D3D3;
 }
 
-#songoqktkb .gt_col_heading {
+#hpcwqctrwv .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2403,7 +2448,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   overflow-x: hidden;
 }
 
-#songoqktkb .gt_column_spanner_outer {
+#hpcwqctrwv .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2415,15 +2460,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 4px;
 }
 
-#songoqktkb .gt_column_spanner_outer:first-child {
+#hpcwqctrwv .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#songoqktkb .gt_column_spanner_outer:last-child {
+#hpcwqctrwv .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#songoqktkb .gt_column_spanner {
+#hpcwqctrwv .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -2435,11 +2480,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   width: 100%;
 }
 
-#songoqktkb .gt_spanner_row {
+#hpcwqctrwv .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#songoqktkb .gt_group_heading {
+#hpcwqctrwv .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2465,7 +2510,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   text-align: left;
 }
 
-#songoqktkb .gt_empty_group_heading {
+#hpcwqctrwv .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -2480,15 +2525,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   vertical-align: middle;
 }
 
-#songoqktkb .gt_from_md > :first-child {
+#hpcwqctrwv .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#songoqktkb .gt_from_md > :last-child {
+#hpcwqctrwv .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#songoqktkb .gt_row {
+#hpcwqctrwv .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2507,7 +2552,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   overflow-x: hidden;
 }
 
-#songoqktkb .gt_stub {
+#hpcwqctrwv .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2520,7 +2565,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#songoqktkb .gt_stub_row_group {
+#hpcwqctrwv .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2534,15 +2579,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   vertical-align: top;
 }
 
-#songoqktkb .gt_row_group_first td {
+#hpcwqctrwv .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#songoqktkb .gt_row_group_first th {
+#hpcwqctrwv .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#songoqktkb .gt_summary_row {
+#hpcwqctrwv .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -2552,16 +2597,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#songoqktkb .gt_first_summary_row {
+#hpcwqctrwv .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#songoqktkb .gt_first_summary_row.thick {
+#hpcwqctrwv .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#songoqktkb .gt_last_summary_row {
+#hpcwqctrwv .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2571,7 +2616,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-bottom-color: #D3D3D3;
 }
 
-#songoqktkb .gt_grand_summary_row {
+#hpcwqctrwv .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -2581,7 +2626,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#songoqktkb .gt_first_grand_summary_row {
+#hpcwqctrwv .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2591,7 +2636,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-top-color: #D3D3D3;
 }
 
-#songoqktkb .gt_last_grand_summary_row_top {
+#hpcwqctrwv .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2601,11 +2646,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-bottom-color: #D3D3D3;
 }
 
-#songoqktkb .gt_striped {
+#hpcwqctrwv .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#songoqktkb .gt_table_body {
+#hpcwqctrwv .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -2614,7 +2659,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-bottom-color: #D3D3D3;
 }
 
-#songoqktkb .gt_footnotes {
+#hpcwqctrwv .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -2628,7 +2673,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-right-color: #D3D3D3;
 }
 
-#songoqktkb .gt_footnote {
+#hpcwqctrwv .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -2637,7 +2682,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#songoqktkb .gt_sourcenotes {
+#hpcwqctrwv .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -2651,7 +2696,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-right-color: #D3D3D3;
 }
 
-#songoqktkb .gt_sourcenote {
+#hpcwqctrwv .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -2659,63 +2704,63 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#songoqktkb .gt_left {
+#hpcwqctrwv .gt_left {
   text-align: left;
 }
 
-#songoqktkb .gt_center {
+#hpcwqctrwv .gt_center {
   text-align: center;
 }
 
-#songoqktkb .gt_right {
+#hpcwqctrwv .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#songoqktkb .gt_font_normal {
+#hpcwqctrwv .gt_font_normal {
   font-weight: normal;
 }
 
-#songoqktkb .gt_font_bold {
+#hpcwqctrwv .gt_font_bold {
   font-weight: bold;
 }
 
-#songoqktkb .gt_font_italic {
+#hpcwqctrwv .gt_font_italic {
   font-style: italic;
 }
 
-#songoqktkb .gt_super {
+#hpcwqctrwv .gt_super {
   font-size: 65%;
 }
 
-#songoqktkb .gt_footnote_marks {
+#hpcwqctrwv .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#songoqktkb .gt_asterisk {
+#hpcwqctrwv .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#songoqktkb .gt_indent_1 {
+#hpcwqctrwv .gt_indent_1 {
   text-indent: 5px;
 }
 
-#songoqktkb .gt_indent_2 {
+#hpcwqctrwv .gt_indent_2 {
   text-indent: 10px;
 }
 
-#songoqktkb .gt_indent_3 {
+#hpcwqctrwv .gt_indent_3 {
   text-indent: 15px;
 }
 
-#songoqktkb .gt_indent_4 {
+#hpcwqctrwv .gt_indent_4 {
   text-indent: 20px;
 }
 
-#songoqktkb .gt_indent_5 {
+#hpcwqctrwv .gt_indent_5 {
   text-indent: 25px;
 }
 </style>
@@ -2817,49 +2862,49 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="some-regressions" class="level2">
 <h2 class="anchored" data-anchor-id="some-regressions">Some regressions</h2>
-<div class="cell" data-hash="_gtsummary_quarto_cache/html/unnamed-chunk-7_9848ac28875316f6b99a6a8776972279">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>linear_model <span class="ot">&lt;-</span> <span class="fu">lm</span>(income <span class="sc">~</span> sex_cat <span class="sc">+</span> age_bir <span class="sc">+</span> race_eth_cat, </span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>                   <span class="at">data =</span> nlsy)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell" data-hash="_gtsummary_quarto_cache/html/unnamed-chunk-8_7dd84ed457bc4770fb8745adaf7da0ae">
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>linear_model <span class="ot">&lt;-</span> <span class="fu">lm</span>(income <span class="sc">~</span> sex_cat <span class="sc">+</span> age_bir <span class="sc">+</span> race_eth_cat, </span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>                   <span class="at">data =</span> nlsy)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div class="cell" data-hash="_gtsummary_quarto_cache/html/unnamed-chunk-8_ffc3dbfa2b8765db49623aa339b49b67">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>linear_model_int <span class="ot">&lt;-</span> <span class="fu">lm</span>(income <span class="sc">~</span> sex_cat<span class="sc">*</span>age_bir <span class="sc">+</span> race_eth_cat, </span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>                   <span class="at">data =</span> nlsy)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell" data-hash="_gtsummary_quarto_cache/html/unnamed-chunk-9_0ef376d82bb1688dcf27b9cd79f4ef17">
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>linear_model_int <span class="ot">&lt;-</span> <span class="fu">lm</span>(income <span class="sc">~</span> sex_cat<span class="sc">*</span>age_bir <span class="sc">+</span> race_eth_cat, </span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>                   <span class="at">data =</span> nlsy)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div class="cell" data-hash="_gtsummary_quarto_cache/html/unnamed-chunk-9_30a650afff096731381626669381de63">
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>logistic_model <span class="ot">&lt;-</span> <span class="fu">glm</span>(glasses <span class="sc">~</span> eyesight_cat <span class="sc">+</span> sex_cat <span class="sc">+</span> income, </span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>                      <span class="at">data =</span> nlsy, <span class="at">family =</span> <span class="fu">binomial</span>())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell" data-hash="_gtsummary_quarto_cache/html/unnamed-chunk-10_0a48834e589b59f4ef57cb23e30a70df">
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>logistic_model <span class="ot">&lt;-</span> <span class="fu">glm</span>(glasses <span class="sc">~</span> eyesight_cat <span class="sc">+</span> sex_cat <span class="sc">+</span> income, </span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>                      <span class="at">data =</span> nlsy, <span class="at">family =</span> <span class="fu">binomial</span>())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="tables" class="level2">
 <h2 class="anchored" data-anchor-id="tables">Tables</h2>
-<div class="cell" data-hash="_gtsummary_quarto_cache/html/unnamed-chunk-10_4dcab3f06e35558fa326c4f11381b968">
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">tbl_regression</span>(</span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>  linear_model, </span>
-<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">intercept =</span> <span class="cn">TRUE</span>,</span>
-<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">label =</span> <span class="fu">list</span>(</span>
-<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>    sex_cat <span class="sc">~</span> <span class="st">"Sex"</span>,</span>
-<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>    race_eth_cat <span class="sc">~</span> <span class="st">"Race/ethnicity"</span>,</span>
-<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>    age_bir <span class="sc">~</span> <span class="st">"Age at first birth"</span></span>
-<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>  ))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell" data-hash="_gtsummary_quarto_cache/html/unnamed-chunk-11_e919d0dd795ee851ff2a8cd2400a158d">
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="fu">tbl_regression</span>(</span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>  linear_model, </span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">intercept =</span> <span class="cn">TRUE</span>,</span>
+<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">label =</span> <span class="fu">list</span>(</span>
+<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a>    sex_cat <span class="sc">~</span> <span class="st">"Sex"</span>,</span>
+<span id="cb18-6"><a href="#cb18-6" aria-hidden="true" tabindex="-1"></a>    race_eth_cat <span class="sc">~</span> <span class="st">"Race/ethnicity"</span>,</span>
+<span id="cb18-7"><a href="#cb18-7" aria-hidden="true" tabindex="-1"></a>    age_bir <span class="sc">~</span> <span class="st">"Age at first birth"</span></span>
+<span id="cb18-8"><a href="#cb18-8" aria-hidden="true" tabindex="-1"></a>  ))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 
-<div id="ptvttlwvov" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#ptvttlwvov table {
+<div id="ugfwwspfny" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#ugfwwspfny table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#ptvttlwvov thead, #ptvttlwvov tbody, #ptvttlwvov tfoot, #ptvttlwvov tr, #ptvttlwvov td, #ptvttlwvov th {
+#ugfwwspfny thead, #ugfwwspfny tbody, #ugfwwspfny tfoot, #ugfwwspfny tr, #ugfwwspfny td, #ugfwwspfny th {
   border-style: none;
 }
 
-#ptvttlwvov p {
+#ugfwwspfny p {
   margin: 0;
   padding: 0;
 }
 
-#ptvttlwvov .gt_table {
+#ugfwwspfny .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -2885,12 +2930,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-left-color: #D3D3D3;
 }
 
-#ptvttlwvov .gt_caption {
+#ugfwwspfny .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#ptvttlwvov .gt_title {
+#ugfwwspfny .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -2902,7 +2947,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-bottom-width: 0;
 }
 
-#ptvttlwvov .gt_subtitle {
+#ugfwwspfny .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -2914,7 +2959,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-top-width: 0;
 }
 
-#ptvttlwvov .gt_heading {
+#ugfwwspfny .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -2926,13 +2971,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-right-color: #D3D3D3;
 }
 
-#ptvttlwvov .gt_bottom_border {
+#ugfwwspfny .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#ptvttlwvov .gt_col_headings {
+#ugfwwspfny .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -2947,7 +2992,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-right-color: #D3D3D3;
 }
 
-#ptvttlwvov .gt_col_heading {
+#ugfwwspfny .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2967,7 +3012,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   overflow-x: hidden;
 }
 
-#ptvttlwvov .gt_column_spanner_outer {
+#ugfwwspfny .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2979,15 +3024,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 4px;
 }
 
-#ptvttlwvov .gt_column_spanner_outer:first-child {
+#ugfwwspfny .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#ptvttlwvov .gt_column_spanner_outer:last-child {
+#ugfwwspfny .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#ptvttlwvov .gt_column_spanner {
+#ugfwwspfny .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -2999,11 +3044,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   width: 100%;
 }
 
-#ptvttlwvov .gt_spanner_row {
+#ugfwwspfny .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#ptvttlwvov .gt_group_heading {
+#ugfwwspfny .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -3029,7 +3074,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   text-align: left;
 }
 
-#ptvttlwvov .gt_empty_group_heading {
+#ugfwwspfny .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -3044,15 +3089,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   vertical-align: middle;
 }
 
-#ptvttlwvov .gt_from_md > :first-child {
+#ugfwwspfny .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#ptvttlwvov .gt_from_md > :last-child {
+#ugfwwspfny .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#ptvttlwvov .gt_row {
+#ugfwwspfny .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -3071,7 +3116,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   overflow-x: hidden;
 }
 
-#ptvttlwvov .gt_stub {
+#ugfwwspfny .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -3084,7 +3129,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#ptvttlwvov .gt_stub_row_group {
+#ugfwwspfny .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -3098,15 +3143,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   vertical-align: top;
 }
 
-#ptvttlwvov .gt_row_group_first td {
+#ugfwwspfny .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#ptvttlwvov .gt_row_group_first th {
+#ugfwwspfny .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#ptvttlwvov .gt_summary_row {
+#ugfwwspfny .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -3116,16 +3161,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#ptvttlwvov .gt_first_summary_row {
+#ugfwwspfny .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#ptvttlwvov .gt_first_summary_row.thick {
+#ugfwwspfny .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#ptvttlwvov .gt_last_summary_row {
+#ugfwwspfny .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -3135,7 +3180,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-bottom-color: #D3D3D3;
 }
 
-#ptvttlwvov .gt_grand_summary_row {
+#ugfwwspfny .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -3145,7 +3190,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#ptvttlwvov .gt_first_grand_summary_row {
+#ugfwwspfny .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -3155,7 +3200,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-top-color: #D3D3D3;
 }
 
-#ptvttlwvov .gt_last_grand_summary_row_top {
+#ugfwwspfny .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -3165,11 +3210,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-bottom-color: #D3D3D3;
 }
 
-#ptvttlwvov .gt_striped {
+#ugfwwspfny .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#ptvttlwvov .gt_table_body {
+#ugfwwspfny .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -3178,7 +3223,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-bottom-color: #D3D3D3;
 }
 
-#ptvttlwvov .gt_footnotes {
+#ugfwwspfny .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -3192,7 +3237,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-right-color: #D3D3D3;
 }
 
-#ptvttlwvov .gt_footnote {
+#ugfwwspfny .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -3201,7 +3246,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#ptvttlwvov .gt_sourcenotes {
+#ugfwwspfny .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -3215,7 +3260,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-right-color: #D3D3D3;
 }
 
-#ptvttlwvov .gt_sourcenote {
+#ugfwwspfny .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -3223,63 +3268,63 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#ptvttlwvov .gt_left {
+#ugfwwspfny .gt_left {
   text-align: left;
 }
 
-#ptvttlwvov .gt_center {
+#ugfwwspfny .gt_center {
   text-align: center;
 }
 
-#ptvttlwvov .gt_right {
+#ugfwwspfny .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#ptvttlwvov .gt_font_normal {
+#ugfwwspfny .gt_font_normal {
   font-weight: normal;
 }
 
-#ptvttlwvov .gt_font_bold {
+#ugfwwspfny .gt_font_bold {
   font-weight: bold;
 }
 
-#ptvttlwvov .gt_font_italic {
+#ugfwwspfny .gt_font_italic {
   font-style: italic;
 }
 
-#ptvttlwvov .gt_super {
+#ugfwwspfny .gt_super {
   font-size: 65%;
 }
 
-#ptvttlwvov .gt_footnote_marks {
+#ugfwwspfny .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#ptvttlwvov .gt_asterisk {
+#ugfwwspfny .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#ptvttlwvov .gt_indent_1 {
+#ugfwwspfny .gt_indent_1 {
   text-indent: 5px;
 }
 
-#ptvttlwvov .gt_indent_2 {
+#ugfwwspfny .gt_indent_2 {
   text-indent: 10px;
 }
 
-#ptvttlwvov .gt_indent_3 {
+#ugfwwspfny .gt_indent_3 {
   text-indent: 15px;
 }
 
-#ptvttlwvov .gt_indent_4 {
+#ugfwwspfny .gt_indent_4 {
   text-indent: 20px;
 }
 
-#ptvttlwvov .gt_indent_5 {
+#ugfwwspfny .gt_indent_5 {
   text-indent: 25px;
 }
 </style>
@@ -3341,34 +3386,34 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </div>
-<div class="cell" data-hash="_gtsummary_quarto_cache/html/unnamed-chunk-11_9e0c768adcc8f798bd44763cb593d564">
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">tbl_regression</span>(</span>
-<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>  logistic_model, </span>
-<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">exponentiate =</span> <span class="cn">TRUE</span>,</span>
-<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">label =</span> <span class="fu">list</span>(</span>
-<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>    sex_cat <span class="sc">~</span> <span class="st">"Sex"</span>,</span>
-<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>    eyesight_cat <span class="sc">~</span> <span class="st">"Eyesight"</span>,</span>
-<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a>    income <span class="sc">~</span> <span class="st">"Income"</span></span>
-<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a>  ))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell" data-hash="_gtsummary_quarto_cache/html/unnamed-chunk-12_9cfcd16a45b51cf3adf3a011c107e977">
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="fu">tbl_regression</span>(</span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>  logistic_model, </span>
+<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">exponentiate =</span> <span class="cn">TRUE</span>,</span>
+<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">label =</span> <span class="fu">list</span>(</span>
+<span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a>    sex_cat <span class="sc">~</span> <span class="st">"Sex"</span>,</span>
+<span id="cb19-6"><a href="#cb19-6" aria-hidden="true" tabindex="-1"></a>    eyesight_cat <span class="sc">~</span> <span class="st">"Eyesight"</span>,</span>
+<span id="cb19-7"><a href="#cb19-7" aria-hidden="true" tabindex="-1"></a>    income <span class="sc">~</span> <span class="st">"Income"</span></span>
+<span id="cb19-8"><a href="#cb19-8" aria-hidden="true" tabindex="-1"></a>  ))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 
-<div id="qvnqjjfyxv" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#qvnqjjfyxv table {
+<div id="lczjjbcfop" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#lczjjbcfop table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#qvnqjjfyxv thead, #qvnqjjfyxv tbody, #qvnqjjfyxv tfoot, #qvnqjjfyxv tr, #qvnqjjfyxv td, #qvnqjjfyxv th {
+#lczjjbcfop thead, #lczjjbcfop tbody, #lczjjbcfop tfoot, #lczjjbcfop tr, #lczjjbcfop td, #lczjjbcfop th {
   border-style: none;
 }
 
-#qvnqjjfyxv p {
+#lczjjbcfop p {
   margin: 0;
   padding: 0;
 }
 
-#qvnqjjfyxv .gt_table {
+#lczjjbcfop .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -3394,12 +3439,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-left-color: #D3D3D3;
 }
 
-#qvnqjjfyxv .gt_caption {
+#lczjjbcfop .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#qvnqjjfyxv .gt_title {
+#lczjjbcfop .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -3411,7 +3456,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-bottom-width: 0;
 }
 
-#qvnqjjfyxv .gt_subtitle {
+#lczjjbcfop .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -3423,7 +3468,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-top-width: 0;
 }
 
-#qvnqjjfyxv .gt_heading {
+#lczjjbcfop .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -3435,13 +3480,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-right-color: #D3D3D3;
 }
 
-#qvnqjjfyxv .gt_bottom_border {
+#lczjjbcfop .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#qvnqjjfyxv .gt_col_headings {
+#lczjjbcfop .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -3456,7 +3501,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-right-color: #D3D3D3;
 }
 
-#qvnqjjfyxv .gt_col_heading {
+#lczjjbcfop .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -3476,7 +3521,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   overflow-x: hidden;
 }
 
-#qvnqjjfyxv .gt_column_spanner_outer {
+#lczjjbcfop .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -3488,15 +3533,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 4px;
 }
 
-#qvnqjjfyxv .gt_column_spanner_outer:first-child {
+#lczjjbcfop .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#qvnqjjfyxv .gt_column_spanner_outer:last-child {
+#lczjjbcfop .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#qvnqjjfyxv .gt_column_spanner {
+#lczjjbcfop .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -3508,11 +3553,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   width: 100%;
 }
 
-#qvnqjjfyxv .gt_spanner_row {
+#lczjjbcfop .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#qvnqjjfyxv .gt_group_heading {
+#lczjjbcfop .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -3538,7 +3583,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   text-align: left;
 }
 
-#qvnqjjfyxv .gt_empty_group_heading {
+#lczjjbcfop .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -3553,15 +3598,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   vertical-align: middle;
 }
 
-#qvnqjjfyxv .gt_from_md > :first-child {
+#lczjjbcfop .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#qvnqjjfyxv .gt_from_md > :last-child {
+#lczjjbcfop .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#qvnqjjfyxv .gt_row {
+#lczjjbcfop .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -3580,7 +3625,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   overflow-x: hidden;
 }
 
-#qvnqjjfyxv .gt_stub {
+#lczjjbcfop .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -3593,7 +3638,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#qvnqjjfyxv .gt_stub_row_group {
+#lczjjbcfop .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -3607,15 +3652,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   vertical-align: top;
 }
 
-#qvnqjjfyxv .gt_row_group_first td {
+#lczjjbcfop .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#qvnqjjfyxv .gt_row_group_first th {
+#lczjjbcfop .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#qvnqjjfyxv .gt_summary_row {
+#lczjjbcfop .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -3625,16 +3670,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#qvnqjjfyxv .gt_first_summary_row {
+#lczjjbcfop .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#qvnqjjfyxv .gt_first_summary_row.thick {
+#lczjjbcfop .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#qvnqjjfyxv .gt_last_summary_row {
+#lczjjbcfop .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -3644,7 +3689,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-bottom-color: #D3D3D3;
 }
 
-#qvnqjjfyxv .gt_grand_summary_row {
+#lczjjbcfop .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -3654,7 +3699,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#qvnqjjfyxv .gt_first_grand_summary_row {
+#lczjjbcfop .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -3664,7 +3709,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-top-color: #D3D3D3;
 }
 
-#qvnqjjfyxv .gt_last_grand_summary_row_top {
+#lczjjbcfop .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -3674,11 +3719,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-bottom-color: #D3D3D3;
 }
 
-#qvnqjjfyxv .gt_striped {
+#lczjjbcfop .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#qvnqjjfyxv .gt_table_body {
+#lczjjbcfop .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -3687,7 +3732,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-bottom-color: #D3D3D3;
 }
 
-#qvnqjjfyxv .gt_footnotes {
+#lczjjbcfop .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -3701,7 +3746,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-right-color: #D3D3D3;
 }
 
-#qvnqjjfyxv .gt_footnote {
+#lczjjbcfop .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -3710,7 +3755,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#qvnqjjfyxv .gt_sourcenotes {
+#lczjjbcfop .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -3724,7 +3769,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-right-color: #D3D3D3;
 }
 
-#qvnqjjfyxv .gt_sourcenote {
+#lczjjbcfop .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -3732,63 +3777,63 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#qvnqjjfyxv .gt_left {
+#lczjjbcfop .gt_left {
   text-align: left;
 }
 
-#qvnqjjfyxv .gt_center {
+#lczjjbcfop .gt_center {
   text-align: center;
 }
 
-#qvnqjjfyxv .gt_right {
+#lczjjbcfop .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#qvnqjjfyxv .gt_font_normal {
+#lczjjbcfop .gt_font_normal {
   font-weight: normal;
 }
 
-#qvnqjjfyxv .gt_font_bold {
+#lczjjbcfop .gt_font_bold {
   font-weight: bold;
 }
 
-#qvnqjjfyxv .gt_font_italic {
+#lczjjbcfop .gt_font_italic {
   font-style: italic;
 }
 
-#qvnqjjfyxv .gt_super {
+#lczjjbcfop .gt_super {
   font-size: 65%;
 }
 
-#qvnqjjfyxv .gt_footnote_marks {
+#lczjjbcfop .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#qvnqjjfyxv .gt_asterisk {
+#lczjjbcfop .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#qvnqjjfyxv .gt_indent_1 {
+#lczjjbcfop .gt_indent_1 {
   text-indent: 5px;
 }
 
-#qvnqjjfyxv .gt_indent_2 {
+#lczjjbcfop .gt_indent_2 {
   text-indent: 10px;
 }
 
-#qvnqjjfyxv .gt_indent_3 {
+#lczjjbcfop .gt_indent_3 {
   text-indent: 15px;
 }
 
-#qvnqjjfyxv .gt_indent_4 {
+#lczjjbcfop .gt_indent_4 {
   text-indent: 20px;
 }
 
-#qvnqjjfyxv .gt_indent_5 {
+#lczjjbcfop .gt_indent_5 {
   text-indent: 25px;
 }
 </style>
@@ -3854,48 +3899,48 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </div>
-<div class="cell" data-hash="_gtsummary_quarto_cache/html/unnamed-chunk-12_d9987ee2dbc3c8d1c463c072e0de8166">
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>tbl_no_int <span class="ot">&lt;-</span> <span class="fu">tbl_regression</span>(</span>
-<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>  linear_model, </span>
-<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">intercept =</span> <span class="cn">TRUE</span>,</span>
-<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">label =</span> <span class="fu">list</span>(</span>
-<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>    sex_cat <span class="sc">~</span> <span class="st">"Sex"</span>,</span>
-<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a>    race_eth_cat <span class="sc">~</span> <span class="st">"Race/ethnicity"</span>,</span>
-<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a>    age_bir <span class="sc">~</span> <span class="st">"Age at first birth"</span></span>
-<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a>  ))</span>
-<span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-10"><a href="#cb11-10" aria-hidden="true" tabindex="-1"></a>tbl_int <span class="ot">&lt;-</span> <span class="fu">tbl_regression</span>(</span>
-<span id="cb11-11"><a href="#cb11-11" aria-hidden="true" tabindex="-1"></a>  linear_model_int, </span>
-<span id="cb11-12"><a href="#cb11-12" aria-hidden="true" tabindex="-1"></a>  <span class="at">intercept =</span> <span class="cn">TRUE</span>,</span>
-<span id="cb11-13"><a href="#cb11-13" aria-hidden="true" tabindex="-1"></a>  <span class="at">label =</span> <span class="fu">list</span>(</span>
-<span id="cb11-14"><a href="#cb11-14" aria-hidden="true" tabindex="-1"></a>    sex_cat <span class="sc">~</span> <span class="st">"Sex"</span>,</span>
-<span id="cb11-15"><a href="#cb11-15" aria-hidden="true" tabindex="-1"></a>    race_eth_cat <span class="sc">~</span> <span class="st">"Race/ethnicity"</span>,</span>
-<span id="cb11-16"><a href="#cb11-16" aria-hidden="true" tabindex="-1"></a>    age_bir <span class="sc">~</span> <span class="st">"Age at first birth"</span>,</span>
-<span id="cb11-17"><a href="#cb11-17" aria-hidden="true" tabindex="-1"></a>    <span class="st">`</span><span class="at">sex_cat:age_bir</span><span class="st">`</span> <span class="sc">~</span> <span class="st">"Sex/age interaction"</span></span>
-<span id="cb11-18"><a href="#cb11-18" aria-hidden="true" tabindex="-1"></a>  ))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell" data-hash="_gtsummary_quarto_cache/html/unnamed-chunk-13_329c8edcff3176607205274ac6488651">
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>tbl_no_int <span class="ot">&lt;-</span> <span class="fu">tbl_regression</span>(</span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a>  linear_model, </span>
+<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">intercept =</span> <span class="cn">TRUE</span>,</span>
+<span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">label =</span> <span class="fu">list</span>(</span>
+<span id="cb20-5"><a href="#cb20-5" aria-hidden="true" tabindex="-1"></a>    sex_cat <span class="sc">~</span> <span class="st">"Sex"</span>,</span>
+<span id="cb20-6"><a href="#cb20-6" aria-hidden="true" tabindex="-1"></a>    race_eth_cat <span class="sc">~</span> <span class="st">"Race/ethnicity"</span>,</span>
+<span id="cb20-7"><a href="#cb20-7" aria-hidden="true" tabindex="-1"></a>    age_bir <span class="sc">~</span> <span class="st">"Age at first birth"</span></span>
+<span id="cb20-8"><a href="#cb20-8" aria-hidden="true" tabindex="-1"></a>  ))</span>
+<span id="cb20-9"><a href="#cb20-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-10"><a href="#cb20-10" aria-hidden="true" tabindex="-1"></a>tbl_int <span class="ot">&lt;-</span> <span class="fu">tbl_regression</span>(</span>
+<span id="cb20-11"><a href="#cb20-11" aria-hidden="true" tabindex="-1"></a>  linear_model_int, </span>
+<span id="cb20-12"><a href="#cb20-12" aria-hidden="true" tabindex="-1"></a>  <span class="at">intercept =</span> <span class="cn">TRUE</span>,</span>
+<span id="cb20-13"><a href="#cb20-13" aria-hidden="true" tabindex="-1"></a>  <span class="at">label =</span> <span class="fu">list</span>(</span>
+<span id="cb20-14"><a href="#cb20-14" aria-hidden="true" tabindex="-1"></a>    sex_cat <span class="sc">~</span> <span class="st">"Sex"</span>,</span>
+<span id="cb20-15"><a href="#cb20-15" aria-hidden="true" tabindex="-1"></a>    race_eth_cat <span class="sc">~</span> <span class="st">"Race/ethnicity"</span>,</span>
+<span id="cb20-16"><a href="#cb20-16" aria-hidden="true" tabindex="-1"></a>    age_bir <span class="sc">~</span> <span class="st">"Age at first birth"</span>,</span>
+<span id="cb20-17"><a href="#cb20-17" aria-hidden="true" tabindex="-1"></a>    <span class="st">`</span><span class="at">sex_cat:age_bir</span><span class="st">`</span> <span class="sc">~</span> <span class="st">"Sex/age interaction"</span></span>
+<span id="cb20-18"><a href="#cb20-18" aria-hidden="true" tabindex="-1"></a>  ))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div class="cell" data-hash="_gtsummary_quarto_cache/html/unnamed-chunk-13_2bf84d6360872a88788e06e28a9868a9">
-<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">tbl_merge</span>(<span class="fu">list</span>(tbl_no_int, tbl_int), </span>
-<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>          <span class="at">tab_spanner =</span> <span class="fu">c</span>(<span class="st">"**Model 1**"</span>, <span class="st">"**Model 2**"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell" data-hash="_gtsummary_quarto_cache/html/unnamed-chunk-14_faa822aed9aa5a954d1b986667f4d89d">
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="fu">tbl_merge</span>(<span class="fu">list</span>(tbl_no_int, tbl_int), </span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>          <span class="at">tab_spanner =</span> <span class="fu">c</span>(<span class="st">"**Model 1**"</span>, <span class="st">"**Model 2**"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 
-<div id="haslbjrcwn" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#haslbjrcwn table {
+<div id="fglyxfnoch" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#fglyxfnoch table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#haslbjrcwn thead, #haslbjrcwn tbody, #haslbjrcwn tfoot, #haslbjrcwn tr, #haslbjrcwn td, #haslbjrcwn th {
+#fglyxfnoch thead, #fglyxfnoch tbody, #fglyxfnoch tfoot, #fglyxfnoch tr, #fglyxfnoch td, #fglyxfnoch th {
   border-style: none;
 }
 
-#haslbjrcwn p {
+#fglyxfnoch p {
   margin: 0;
   padding: 0;
 }
 
-#haslbjrcwn .gt_table {
+#fglyxfnoch .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -3921,12 +3966,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-left-color: #D3D3D3;
 }
 
-#haslbjrcwn .gt_caption {
+#fglyxfnoch .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#haslbjrcwn .gt_title {
+#fglyxfnoch .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -3938,7 +3983,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-bottom-width: 0;
 }
 
-#haslbjrcwn .gt_subtitle {
+#fglyxfnoch .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -3950,7 +3995,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-top-width: 0;
 }
 
-#haslbjrcwn .gt_heading {
+#fglyxfnoch .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -3962,13 +4007,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-right-color: #D3D3D3;
 }
 
-#haslbjrcwn .gt_bottom_border {
+#fglyxfnoch .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#haslbjrcwn .gt_col_headings {
+#fglyxfnoch .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -3983,7 +4028,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-right-color: #D3D3D3;
 }
 
-#haslbjrcwn .gt_col_heading {
+#fglyxfnoch .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -4003,7 +4048,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   overflow-x: hidden;
 }
 
-#haslbjrcwn .gt_column_spanner_outer {
+#fglyxfnoch .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -4015,15 +4060,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 4px;
 }
 
-#haslbjrcwn .gt_column_spanner_outer:first-child {
+#fglyxfnoch .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#haslbjrcwn .gt_column_spanner_outer:last-child {
+#fglyxfnoch .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#haslbjrcwn .gt_column_spanner {
+#fglyxfnoch .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -4035,11 +4080,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   width: 100%;
 }
 
-#haslbjrcwn .gt_spanner_row {
+#fglyxfnoch .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#haslbjrcwn .gt_group_heading {
+#fglyxfnoch .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -4065,7 +4110,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   text-align: left;
 }
 
-#haslbjrcwn .gt_empty_group_heading {
+#fglyxfnoch .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -4080,15 +4125,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   vertical-align: middle;
 }
 
-#haslbjrcwn .gt_from_md > :first-child {
+#fglyxfnoch .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#haslbjrcwn .gt_from_md > :last-child {
+#fglyxfnoch .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#haslbjrcwn .gt_row {
+#fglyxfnoch .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -4107,7 +4152,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   overflow-x: hidden;
 }
 
-#haslbjrcwn .gt_stub {
+#fglyxfnoch .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -4120,7 +4165,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#haslbjrcwn .gt_stub_row_group {
+#fglyxfnoch .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -4134,15 +4179,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   vertical-align: top;
 }
 
-#haslbjrcwn .gt_row_group_first td {
+#fglyxfnoch .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#haslbjrcwn .gt_row_group_first th {
+#fglyxfnoch .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#haslbjrcwn .gt_summary_row {
+#fglyxfnoch .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -4152,16 +4197,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#haslbjrcwn .gt_first_summary_row {
+#fglyxfnoch .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#haslbjrcwn .gt_first_summary_row.thick {
+#fglyxfnoch .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#haslbjrcwn .gt_last_summary_row {
+#fglyxfnoch .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -4171,7 +4216,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-bottom-color: #D3D3D3;
 }
 
-#haslbjrcwn .gt_grand_summary_row {
+#fglyxfnoch .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -4181,7 +4226,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#haslbjrcwn .gt_first_grand_summary_row {
+#fglyxfnoch .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -4191,7 +4236,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-top-color: #D3D3D3;
 }
 
-#haslbjrcwn .gt_last_grand_summary_row_top {
+#fglyxfnoch .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -4201,11 +4246,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-bottom-color: #D3D3D3;
 }
 
-#haslbjrcwn .gt_striped {
+#fglyxfnoch .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#haslbjrcwn .gt_table_body {
+#fglyxfnoch .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -4214,7 +4259,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-bottom-color: #D3D3D3;
 }
 
-#haslbjrcwn .gt_footnotes {
+#fglyxfnoch .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -4228,7 +4273,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-right-color: #D3D3D3;
 }
 
-#haslbjrcwn .gt_footnote {
+#fglyxfnoch .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -4237,7 +4282,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#haslbjrcwn .gt_sourcenotes {
+#fglyxfnoch .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -4251,7 +4296,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-right-color: #D3D3D3;
 }
 
-#haslbjrcwn .gt_sourcenote {
+#fglyxfnoch .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -4259,63 +4304,63 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#haslbjrcwn .gt_left {
+#fglyxfnoch .gt_left {
   text-align: left;
 }
 
-#haslbjrcwn .gt_center {
+#fglyxfnoch .gt_center {
   text-align: center;
 }
 
-#haslbjrcwn .gt_right {
+#fglyxfnoch .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#haslbjrcwn .gt_font_normal {
+#fglyxfnoch .gt_font_normal {
   font-weight: normal;
 }
 
-#haslbjrcwn .gt_font_bold {
+#fglyxfnoch .gt_font_bold {
   font-weight: bold;
 }
 
-#haslbjrcwn .gt_font_italic {
+#fglyxfnoch .gt_font_italic {
   font-style: italic;
 }
 
-#haslbjrcwn .gt_super {
+#fglyxfnoch .gt_super {
   font-size: 65%;
 }
 
-#haslbjrcwn .gt_footnote_marks {
+#fglyxfnoch .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#haslbjrcwn .gt_asterisk {
+#fglyxfnoch .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#haslbjrcwn .gt_indent_1 {
+#fglyxfnoch .gt_indent_1 {
   text-indent: 5px;
 }
 
-#haslbjrcwn .gt_indent_2 {
+#fglyxfnoch .gt_indent_2 {
   text-indent: 10px;
 }
 
-#haslbjrcwn .gt_indent_3 {
+#fglyxfnoch .gt_indent_3 {
   text-indent: 15px;
 }
 
-#haslbjrcwn .gt_indent_4 {
+#fglyxfnoch .gt_indent_4 {
   text-indent: 20px;
 }
 
-#haslbjrcwn .gt_indent_5 {
+#fglyxfnoch .gt_indent_5 {
   text-indent: 25px;
 }
 </style>

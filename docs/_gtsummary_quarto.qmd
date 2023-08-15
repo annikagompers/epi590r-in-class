@@ -30,7 +30,7 @@ nlsy <- read_csv(here::here("data", "raw", "nlsy.csv"),
          glasses_cat = factor(glasses, labels = c("No", "Yes"))) 
 ```
 
-Other options: Suppress code (but still run it) using `#| include: FALSE` Suppress output with `#| output: FALSE` or `#| message: FALSE`
+Other options: Suppress code (but still run it) using `#| echo: FALSE` Suppress output with `#| output: FALSE` or `#| message: FALSE`
 
 # Customization of `tbl_summary()`
 
@@ -59,7 +59,9 @@ tbl_summary(
 ```
 
 ```{r}
-tbl_summary(
+#| label: tbl-one
+#| tbl-cap: "Demographics by sex"
+table1 <- tbl_summary(
   nlsy,
   by = sex_cat,
   include = c(sex_cat, race_eth_cat,
@@ -77,7 +79,16 @@ tbl_summary(
   bold_labels() |> 
   modify_footnote(update = everything() ~ NA) |> 
   modify_header(label = "**Variable**", p.value = "**P**")
+header_names <- table1 |> show_header_names()
+table1
+pval_race <- inline_text(table1, variable = "race_eth_cat",
+													column = "p.value")
+pval_race
+diff_race <- if (pval_race < 0.05) "was significantly different" else "did not differ"
+stats <- list(mean_sleep_m = round(mean(nlsy$sleep_wknd[nlsy$sex_cat=="Male"], na.rm=TRUE), 2), mean_sleep_f = round(mean(nlsy$sleep_wknd[nlsy$sex_cat=="Female"], na.rm=TRUE), 2))
 ```
+
+@tbl-one shows descriptive statistics stratified by sex. The distribution of race/ethnicity `r diff_race` by sex (`r pval_race`). The mean number of hours slept on weekends was `r stats$mean_sleep_m` among men and `r stats$mean_sleep_f` among women.
 
 # Univariate regression
 
